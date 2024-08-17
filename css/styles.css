@@ -588,3 +588,113 @@ margin-right: 120px;
 .footer-link-icon:focus{
     background-color: #31d0aa;
 }
+
+.backdrop{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 408px;
+    min-height: 584px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: #fcfcfc;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.backdrop:not(.is-open) .modal{
+    transform: translate(-50%, -50%) scale(1.5);
+}
+.x-button{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.x-button:hover,
+.x-button:focus {
+  border: none;
+  background-color: #404bbf;
+}
+.x-button:focus > .svg-modal-button,
+.x-button:hover > .svg-modal-button {
+  fill: #ffffff;
+}
+.form-modal{
+    margin-top:16px;
+}
+.form-modal-title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-top: 72px;
+}
+.lable-name{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #8e8f99;
+    display: block;
+    margin-bottom: 4px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+
+}
+.lable-form-name{
+    width: 360px;
+height: 58px;
+}
+
+.input-form-name{
+    position: relative;
+}  
+.input-modal{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.svg-modal-form{
+    fill: #2e2f42;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-modal:focus + .svg-modal-form {
+    fill: #4d5ae5;
+  }
