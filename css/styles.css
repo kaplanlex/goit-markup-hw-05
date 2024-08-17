@@ -705,7 +705,7 @@ margin-bottom: 8px;
 .input-modal:focus + .svg-modal-form {
     fill: #4d5ae5;
   }
-  .input-modal :focus{
+  .input-modal:focus{
     border-color: #4D5AE5;
   }
 
@@ -721,6 +721,7 @@ margin-bottom: 8px;
   border-radius: 4px;
   background-color: transparent;
   padding: 8px 16px;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .textarea-modal-comment:focus{
@@ -734,6 +735,9 @@ margin-bottom: 8px;
     line-height: 1.16667;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
+  }
+  .textarea-modal{
+    margin-bottom: 16px;
   }
 
   .checkbox-p{
@@ -755,6 +759,7 @@ margin-bottom: 8px;
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-hiden:checked + .label-policy .span-p{
@@ -777,7 +782,7 @@ margin-bottom: 8px;
     height: 56px;
     display: block;
     cursor: pointer;
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     padding: 16px 32px;
     min-width: 169px;
