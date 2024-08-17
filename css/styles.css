@@ -596,7 +596,7 @@ margin-right: 120px;
 font-size: 12px;
 line-height: 2;
 letter-spacing: 0.04em;
-color: #fff;
+color: #ffffff;
 font-family: "Roboto", sans-serif;
 }
 
@@ -606,9 +606,17 @@ border-radius: 4px;
 width: 264px;
 height: 40px;
 background-color:#2e2f42;
-padding-left:16;
+padding-left:16px;
+background-color: transparent;
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+color: #ffffff;
+
 }
 .button-footer-sub{
+min-width: 165px;
 display: flex;
 height: 40px;
 justify-content: center;
@@ -631,9 +639,10 @@ margin-left: 24px;
 }
 .form-footer{
     display: flex;
+    gap: 24px;
 }
 .icon-footer-sub{
-    margin-left: 16;
+    margin-left: 16px;
 }
 
 .backdrop{
